@@ -336,7 +336,7 @@ img.eqwl {
 }
 
 table {
-    border: 2px solid black;
+    border: 0px solid black;
     border-collapse: collapse;
 }
 
@@ -364,4 +364,16 @@ img {
 table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
+}
+
+#projects table{
+    border: 0;
+}
+
+#projects td{
+    border: 0;
+}
+
+#projects tr{
+    border: 0;
 }
