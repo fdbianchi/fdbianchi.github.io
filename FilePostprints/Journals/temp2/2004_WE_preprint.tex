@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[final]{pdfpages}
+
+\definecolor{clink}{rgb}{0,0,0.4}
+\definecolor{ccite}{rgb}{0,0,0.4}
+\usepackage[pdftex]{hyperref}
+\hypersetup{colorlinks, backref, pdfpagemode=None, linkcolor=clink,
+            citecolor=ccite, urlcolor=clink, pdfhighlight=/I, pdfstartview=FitH,
+            pdfauthor=F.D.Bianchi, breaklinks}
+
+
+\usepackage{databib}
+\usepackage[
+    backend=bibtex8, firstinits=true, style=authortitle, bibencoding=auto,
+    maxnames=15, url=false, sorting=ynt, citereset=subsection,
+    defernumbers=true]{biblatex}
+\input{../biblatex_macros.tex}
+\addbibresource{../../MyPublications.bib}
+\setlength{\bibhang}{0.0cm}
+\defbibheading{bibliography}{\large\bf This is a pre-print of the article:\vspace{1cm}}
+
+
+\setlength{\parindent}{0.0cm}
+
+\newcommand{\doi}[1]{DOI: \href{http://dx.doi.org/#1}{#1}}
+
+
+\begin{document}
+
+
+\thispagestyle{empty}
+
+\vspace{3cm}
+
+\nocite{FDB-art-6}
+\printbibliography
+
+\vspace{3cm}
+\doi{10.1002/we.103}
+
+\vspace{1.5cm}
+Url: \url{http://onlinelibrary.wiley.com/doi/10.1002/we.103/abstract;jsessionid=487B10FE373210F844273BA69E6C411A.f03t04}
+
+\newpage
+\includepdf[pages=-]{2004_WE.pdf}
+
+
+
+\end{document}
+
